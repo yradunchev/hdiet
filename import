@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+import os.path
+import sys
+
+if os.path.isfile("weight"):
+    print("Local weight file already exists")
+    sys.exit(-1)
+
+f = open("hackdiet_db.csv","r")
+s = ""
+for line in f:
+    if len(line.strip()) == 0:
+        continue
+    if line[0].isdigit():
+        splitline = line.split(",")
+        date = splitline[0].strip()
+        weight = splitline[1].strip()
+        if len(weight) == 0:
+            continue
+        else:
+            weight = float(weight)
+            s += "%s\t%.1f\n" %(date,weight)
+f.close()
+            
+if len(s) > 0:
+    w = open("weight", "w")
+    w.write(s)
+    w.close()

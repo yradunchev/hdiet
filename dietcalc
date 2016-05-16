@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+from datetime import *
+
+##########
+
+From = date(2016,1,1)
+Initial = 100.0
+Goal = 80.0
+PerWeekChange = -1.0
+
+##########
+
+
+date = From
+weight = Initial
+
+s = "#Date\tTarget\n"
+s +=  "%s\t%.1f\n" %(date, weight)
+while (weight > Goal):
+    date += timedelta(1)
+    weight += PerWeekChange / 7.0
+    s += "%s\t%.3f\n" %(date, weight)
+
+f = open("diet","w")
+f.write(s)
+f.close()

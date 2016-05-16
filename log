@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    "Usage: $0 WEIGHT"
+    exit -1
+fi
+
+date=`date +%Y-%m-%d`
+weight=$1
+
+echo -e "$date\t$weight" >> weight
+
+./show

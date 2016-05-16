@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+trend = None
+f = open("weight", "r")
+s = "#Date\t\tWeight\tTrend\n"
+for line in f:
+    if len(line.strip()) == 0:
+        continue
+    splitline = line.split("\t")
+    date = splitline[0]
+    weight = float(splitline[1])
+    if trend is None:
+        trend = weight
+    else:
+        trend = trend + 0.1 * (weight - trend)
+    s += "%s\t%.1f\t%.1f\n" %(date, weight, trend)
+f.close()
+
+p = open("processed", "w")
+p.write(s)
+p.close()
