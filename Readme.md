@@ -28,6 +28,5 @@ Makeup
 * show - display the curves using gnuplot-x11, takes either no arguments or FROM and TO in format YYYY-MM-DD
 * dietcalc - calculate a diet curve for certain goals, also gets displayed with 'show'
 
-Weights are logged in plain text file, each line consisting of YYYY-MM-DD\tWEIGHT.
-
+Weights are logged as plain text, each line consisting of YYYY-MM-DD\tWEIGHT.
 
