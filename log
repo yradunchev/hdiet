@@ -10,4 +10,4 @@ weight=$1
 
 echo -e "$date\t$weight" >> weight
 
-./show
+./process && ./show
