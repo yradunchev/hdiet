@@ -32,3 +32,15 @@ Weights are logged as plain text, each line consisting of YYYY-MM-DD\tWEIGHT.
 The log file is always processed as a whole again, because it keeps the
 program simple and even a file with data from 100 years only takes 180ms to
 process and display on my machine.
+
+Example
+=======
+
+Example of a filled weight log:
+
+![](weight_example.png)
+
+
+Example of a trend graph with the floaters and sinkers.
+
+![](plot_example.png)
