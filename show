@@ -22,7 +22,7 @@ fi
 gnuplot -p << EOF
 set xdata time
 set timefmt "%Y-%m-%d"
-set format x "%d.%m"
+set format x "%d."
 set xtics 86400 # 1 day
 unset mxtics
 set grid
