@@ -5,11 +5,11 @@ FILE="processed"
 DIETFILE="diet"
 
 if [ "$#" -eq 0 ]; then
-    rangeFrom=`date --d "-31 days" $FORMAT`
-    rangeTo=`date --d "+1 day" $FORMAT`
+    rangeFrom=`date -d "-31 days" $FORMAT`
+    rangeTo=`date -d "+1 day" $FORMAT`
 elif [ "$#" -eq 2 ]; then
-    rangeFrom=`date --d "$1 - 1 day" $FORMAT`
-    rangeTo=`date --d "$2 + 1 day" $FORMAT`
+    rangeFrom=`date -d "$1 - 1 day" $FORMAT`
+    rangeTo=`date -d "$2 + 1 day" $FORMAT`
 else
     echo "Usage: $0 [FROM_DATE TO_DATE]"
     exit -1
